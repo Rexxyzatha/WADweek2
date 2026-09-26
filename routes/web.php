@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BengkelController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Jalur untuk melihat halaman data bengkel
+Route::get('/bengkel', [BengkelController::class, 'index']);
+
+// Jalur untuk memproses penyimpanan data dari form
+Route::post('/bengkel', [BengkelController::class, 'store']);
