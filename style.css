@@ -1,0 +1,58 @@
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .my-table{
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .my-table th, .my-table td{
+    border: 1px black solid;
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  .my-table th{
+    background-color: rgb(29, 29, 105);
+    color: white;
+  }
+  
+  .my-form{
+    display: block;
+    background-color: rgb(212, 212, 212);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1400px;
+    label{
+      margin: 10px
+    }
+    input{
+      margin: 10px;
+      padding: 5px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    select{
+      margin: 10px;
+      padding: 5px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    input[type="submit"]{
+      background-color: rgb(34, 55, 175);
+      color: white;
+      border: 1px solid black;
+      padding: 10px 20px;
+    }
+  }

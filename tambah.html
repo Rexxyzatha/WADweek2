@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Tambah Data Kendaraan</h1>
+  <form class="my-form">
+    <label for="plat">Nomor Plat:</label><br>
+    <input type="text" id="plat" name="plat" placeholder="Contoh: X 1234 XX"><br>
+    <label for="merk">Merk:</label><br>
+    <input type="text" id="merk" name="merk" placeholder="Contoh: Toyota"><br>
+    <label for="tahun">Tahun Pembuatan:</label><br>
+    <input type="number" id="tahun" name="tahun" placeholder="Contoh: 2020"><br>
+    <label for="transmisi">Tipe Transmisi:</label><br>
+    <select id="transmisi" name="transmisi">
+      <option value="">Pilih Tipe Transmisi</option>
+      <option value="manual">Manual</option>
+      <option value="automatic">Automatic</option>
+    </select><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
