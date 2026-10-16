@@ -1,0 +1,62 @@
+<?php
+require "koneksi.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $jenis = $_POST["jenis"];
+    $durasi = $_POST["durasi"];
+    $ketentuan = $_POST["ketentuan"];
+
+    $sql = "INSERT INTO paket_rental (jenis_paket, durasi, ketentuan)
+            VALUES (?, ?, ?)";
+    mysqli_execute_query($koneksi, $sql, [$jenis, $durasi, $ketentuan]);
+
+    header("Location: index.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Tambah Paket Rental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark menu-atas">
+        <div class="container">
+            <span class="navbar-brand">Rental Mobil</span>
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.php">Daftar Paket</a>
+                <a class="nav-link" href="tambah.php">Tambah Paket</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container konten">
+        <h1>Tambah Paket Rental</h1>
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="jenis" class="form-label">Jenis Paket</label>
+                <select class="form-select" id="jenis" name="jenis">
+                    <option value="Lepas Kunci">Lepas Kunci</option>
+                    <option value="All-in">All-in</option>
+                    <option value="Luar Kota">Luar Kota</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="durasi" class="form-label">Durasi (hari)</label>
+                <input type="number" class="form-control" id="durasi" name="durasi" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ketentuan" class="form-label">Ketentuan</label>
+                <textarea class="form-control" id="ketentuan" name="ketentuan" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+    </div>
+</body>
+</html>
