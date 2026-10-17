@@ -12,14 +12,27 @@
     <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-md">
         
         <!-- Header & Tombol Tambah -->
-        <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold text-gray-800">Daftar Bengkel Mitra</h1>
-            <a href="{{ route('bengkel.create') }}" 
-               class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md transition text-sm">
-                + Tambah Bengkel
-            </a>
-        </div>
+       <!-- Header & Tombol Aksi -->
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold text-gray-800">Daftar Bengkel Mitra</h1>
+    
+    <div class="flex items-center gap-3">
+        <!-- Tombol Tambah Bengkel -->
+        <a href="{{ route('bengkel.create') }}" 
+           class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition text-sm shadow-sm flex items-center gap-1">
+            + Tambah Bengkel
+        </a>
 
+        <!-- Tombol Logout -->
+        <form action="{{ route('logout') }}" method="POST" class="inline mb-0">
+            @csrf
+            <button type="submit" 
+                    class="bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-lg transition text-sm shadow-sm flex items-center gap-1 cursor-pointer">
+                Logout
+            </button>
+        </form>
+    </div>
+</div>
         <!-- Flash Message Notification -->
         @if(session('success'))
             <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md text-sm">
