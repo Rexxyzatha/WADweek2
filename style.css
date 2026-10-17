@@ -1,9 +1,6 @@
   body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
-    padding-top: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
   }
 
   .my-table{
@@ -56,3 +53,18 @@
       padding: 10px 20px;
     }
   }
+
+  .navbararmada{
+    background-color: rgb(29, 29, 105);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .kartu {
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #d0d4e0;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 1500px;
+}
