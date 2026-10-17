@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $durasi = $_POST["durasi"];
     $ketentuan = $_POST["ketentuan"];
 
-    $sql = "UPDATE paket_rental
+    $sql = "UPDATE daftar_paket_rental
             SET jenis_paket = ?, durasi = ?, ketentuan = ?
             WHERE id = ?";
     mysqli_execute_query($koneksi, $sql, [$jenis, $durasi, $ketentuan, $id]);
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $id = $_GET["id"];
 $hasil = mysqli_execute_query($koneksi,
-    "SELECT * FROM paket_rental WHERE id = ?", [$id]);
+    "SELECT * FROM daftar_paket_rental WHERE id = ?", [$id]);
 $row = mysqli_fetch_assoc($hasil);
 ?>
 <!DOCTYPE html>

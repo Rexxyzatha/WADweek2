@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $durasi = $_POST["durasi"];
     $ketentuan = $_POST["ketentuan"];
 
-    $sql = "INSERT INTO paket_rental (jenis_paket, durasi, ketentuan)
+    $sql = "INSERT INTO daftar_paket_rental (jenis_paket, durasi, ketentuan)
             VALUES (?, ?, ?)";
     mysqli_execute_query($koneksi, $sql, [$jenis, $durasi, $ketentuan]);
 
