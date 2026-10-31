@@ -64,7 +64,7 @@ if (!$hasil) {
           <?php endwhile; ?>
         <?php else : ?>
           <tr>
-            <td colspan="4" class="text-center">Belum ada data kendaraan.</td>
+            <td colspan="5" class="text-center">Belum ada data kendaraan.</td>
           </tr>
         <?php endif; ?>
       </tbody>

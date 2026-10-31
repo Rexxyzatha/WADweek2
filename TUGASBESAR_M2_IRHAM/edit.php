@@ -71,7 +71,7 @@ if (!$data) {
 
     <form method="post">
       <!-- Plat dikirim lewat input hidden, jadi tetap terbawa saat submit -->
-      <input type="hidden" name="plat" value="<?= htmlspecialchars($data['Nomor_Plat']); ?>">
+      <input type="text" name="hidden" value="<?= htmlspecialchars($data['Nomor_Plat']); ?>">
 
       <div class="mb-3">
         <label class="form-label">Nomor Plat</label>
